@@ -41,8 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
               Container(
                 padding: EdgeInsets.only(left: 10.0, right: 10.0),
                 child: Container(
-                    width: 50.0,
-                    height: 50.0,
+                    width: 60.0,
+                    height: 60.0,
                     decoration: new BoxDecoration(
                         shape: BoxShape.circle,
                         image: DecorationImage(
@@ -64,26 +64,26 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 60,
                     child: Text(
                       Article.description,
-                      style: TextStyle(
-                        fontSize: 15,
-                      ),
                       maxLines: 3,
                       overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 15,
+                      ),
                     ),
                   ),
                 ],
               ),
               Container(
-                width: 90,
-                height: 50,
+                height: 65,
+                padding: EdgeInsets.only(right: 10),
                 child: Text(
                   Article.publishedAt,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.grey,
                     fontSize: 15,
                   ),
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
                 ),
               )
             ],
@@ -96,21 +96,26 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.menu),
-        title: Text(
-          'Your Blogs',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+        appBar: AppBar(
+          leading: Icon(Icons.menu),
+          title: Text(
+            'Your Blogs',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
         ),
-      ),
-      body: Column(
-        children: <Widget>[
-          Column(
-              children: articles.map((p) {
-            return articleCard(p);
-          }).toList())
-        ],
-      ),
-    );
+        body: Column(
+          children: <Widget>[
+            Column(
+                children: articles.map((p) {
+              return articleCard(p);
+            }).toList())
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.grey,
+          onPressed: () {},
+          tooltip: 'Create New Article',
+          child: Icon(Icons.add),
+        ));
   }
 }
