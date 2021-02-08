@@ -6,8 +6,11 @@ class CreatePostScreen extends StatefulWidget {
 }
 
 class _State extends State<CreatePostScreen> {
-  TextEditingController titleController = TextEditingController();
-  TextEditingController descController = TextEditingController();
+  TextEditingController titleController =
+      TextEditingController(text: 'What is flutter?');
+  TextEditingController descController = TextEditingController(
+      text:
+          'Flutter is Google\'s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. In this codelab, you\'ll create a simple chat application for Android, iOS, and (optionally) the web.');
 
   FocusNode myFocusNode = new FocusNode();
 
@@ -38,7 +41,7 @@ class _State extends State<CreatePostScreen> {
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 2.0),
                     ),
-                    hintText: 'What is flutter?',
+                    hintText: 'Type title...',
                     hintStyle: TextStyle(color: Colors.black),
                   ),
                 ),
@@ -55,8 +58,7 @@ class _State extends State<CreatePostScreen> {
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 2.0),
                     ),
-                    hintText:
-                        'Flutter is Google\'s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase. In this codelab, you\'ll create a simple chat application for Android, iOS, and (optionally) the web.',
+                    hintText: 'Type decription...',
                     hintStyle: TextStyle(color: Colors.black),
                   ),
                   keyboardType: TextInputType.multiline,
