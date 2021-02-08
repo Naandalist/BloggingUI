@@ -33,7 +33,7 @@ class _State extends State<LoginScreen> {
                       'Blogging',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w900,
+                          fontWeight: FontWeight.bold,
                           fontSize: 40),
                     )),
                 Container(
@@ -43,6 +43,10 @@ class _State extends State<LoginScreen> {
                         color: Colors.white, fontWeight: FontWeight.bold),
                     controller: fullNameController,
                     decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.person,
+                        color: Colors.white,
+                      ),
                       border: OutlineInputBorder(),
                       labelText: 'Full Name',
                       labelStyle: TextStyle(color: Colors.white),
@@ -64,6 +68,10 @@ class _State extends State<LoginScreen> {
                         color: Colors.white, fontWeight: FontWeight.bold),
                     controller: emailController,
                     decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.alternate_email_rounded,
+                        color: Colors.white,
+                      ),
                       border: OutlineInputBorder(),
                       labelText: 'Valid Email',
                       labelStyle: TextStyle(color: Colors.white),
@@ -86,6 +94,10 @@ class _State extends State<LoginScreen> {
                     obscureText: true,
                     controller: passwordController,
                     decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.lock,
+                          color: Colors.white,
+                        ),
                         border: OutlineInputBorder(),
                         labelText: 'Password',
                         labelStyle: TextStyle(color: Colors.white),
@@ -109,6 +121,10 @@ class _State extends State<LoginScreen> {
                     obscureText: true,
                     controller: confirmPasswordController,
                     decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.lock,
+                        color: Colors.white,
+                      ),
                       border: OutlineInputBorder(),
                       labelText: 'Confirm Password',
                       labelStyle: TextStyle(color: Colors.white),
