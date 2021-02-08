@@ -15,10 +15,11 @@ class _MainPageState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
       theme: ThemeData(
+          primaryColor: Colors.orange,
           textButtonTheme: TextButtonThemeData(
               style: TextButton.styleFrom(
-        primary: Colors.black,
-      ))),
+            primary: Colors.black,
+          ))),
     );
   }
 }
