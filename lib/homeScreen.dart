@@ -1,3 +1,4 @@
+import 'package:blogging/createPostScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:blogging/Articles.dart';
 
@@ -113,7 +114,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.grey,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return CreatePostScreen();
+            }));
+          },
           tooltip: 'Create New Article',
           child: Icon(Icons.add),
         ));
