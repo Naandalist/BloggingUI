@@ -1,4 +1,4 @@
-package com.example.blogging
+package com.naandalist.blogging
 
 import io.flutter.embedding.android.FlutterActivity
 
