@@ -100,6 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: Icon(Icons.menu),
         title: Text(
           'Your Blogs',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: Column(
