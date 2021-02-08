@@ -12,6 +12,7 @@ class _MainPageState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: LoginScreen(),
       theme: ThemeData(
           textButtonTheme: TextButtonThemeData(
